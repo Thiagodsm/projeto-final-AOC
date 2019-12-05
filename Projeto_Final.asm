@@ -109,6 +109,10 @@ direction:
 	add $a0,$a0,1			#adiciona mais um no numero aleatorio
 	move $t2,$a0			#move o valor para $t2
 	
+	li $v0, 32			#define a velocidade na qual o aspirar ira se mover
+	la $a0, 50
+	syscall
+	
 	beq $t2,1,north			#caso o valor seja 1 vai para o Norte
 	beq $t2,2,northeast		#caso o valor seja 2 vai para o Nordeste
 	beq $t2,3,east	 		#caso o valor seja 3 vai para o oeste
